@@ -87,13 +87,12 @@
 			<a href="#">England</a>
 	</div><! // List 2 -->
 	
+	<div>
+		<div id="singapore" class="right">singapore</div>
+		<div id="hongkong" class="right">hongkong</div>
+	</div>
+	
 </div>
-
-<div id="right">
-	<div class="panel" id="singapore">singapore</div>
-	<div class="panel" id="hongkong">hongkong</div>
-</div>
-
 
 <!-- <div class="footer">
 	<p><a href="#">map</a>.  <a href="#">layovers</a>.  <a href="#">about</a>.</p>
@@ -112,28 +111,6 @@ $(document).ready(function ()
    
 });
 
-	/* for horizontal browsing */
-	jQuery(function($) {
-		      $('a.panel').click(function() {
-	        var $target = $($(this).attr('href')),
-	            $other = $target.siblings('.active');
-	        
-	        if (!$target.hasClass('active')) {
-	            $other.each(function(index, self) {
-	                var $this = $(this);
-	                $this.removeClass('active').animate({
-	                    left: $this.width()
-	                }, 500);
-	            });
-	
-	            $target.addClass('active').show().css({
-	                left: -($target.width())
-	            }).animate({
-	                left: 0
-	            }, 500);
-	        }
-	    });
-	});
 
 </script>
 
