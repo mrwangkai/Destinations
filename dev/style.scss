@@ -11,7 +11,7 @@ body {
 
 div.wrapper {
   position: relative;
-  width: 600px;
+  width: 700px;
   height: auto;
   background: #333333;
   margin: 0 auto;
@@ -21,11 +21,11 @@ div.wrapper {
  
 
 div.wrapper > div {
-  width: calc(87%/2);
+  width: calc(77%/2);
   height: auto;
   min-height: 300px;
   background: #f9f9f9;
-  float: right;
+  float: left;
   margin-top: 30px;
   margin-bottom: 50px;
   padding-left: calc(10%/2);
@@ -37,7 +37,9 @@ div.wrapper > div:nth-child(odd) {
   min-height: 300px;
   height: auto;
   margin-bottom: 50px;
+  margin-right: 10px;
   }
+  
   
 div.wrapper > div:nth-child(odd):hover, div.wrapper > div:nth-child(even):hover {background: #f3f3f3;}
 
@@ -58,4 +60,4 @@ li {padding-left: 20px; font-style: normal;}
 
 .footer {font-size:10pt; color:#d1d1d1;}
 
-.panel {display: none;}
+.panel {display: none; }

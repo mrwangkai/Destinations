@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/style.css">
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
 
-<title>Kai / Destinations</title>
+<title>Kai / Destinations'</title>
 
 </head>
 
@@ -60,7 +60,7 @@
 				<a href="#"><li>San Diego</li></a>
 				<a href="#"><li>San Fransisco</li></a>
 				<a href="#"><li>Los Angeles</li></a>
-				<a href="#"><li>Yellowstone National Park</li></a>			
+				<a href="#"><li>Yellowstone NP</li></a>			
 				<a href="#"><li>Minneapolis</li></a>			
 				<a href="#"><li>Mt. Rushmore</li></a>
 				<a href="#"><li>Chicago</li></a>
@@ -87,10 +87,12 @@
 			<a href="#">England</a>
 	</div><! // List 2 -->
 	
-
-	
 </div>
 
+<div id="right">
+	<div class="panel" id="singapore">singapore</div>
+	<div class="panel" id="hongkong">hongkong</div>
+</div>
 
 
 <!-- <div class="footer">
@@ -107,31 +109,31 @@ $(document).ready(function ()
         $("li", this).slideToggle('100','swing');
     });    
    
-   /* for horizontal browsing */
-
+   
 });
 
-jQuery(function($) {
-	      $('a.panel').click(function() {
-        var $target = $($(this).attr('href')),
-            $other = $target.siblings('.active');
-        
-        if (!$target.hasClass('active')) {
-            $other.each(function(index, self) {
-                var $this = $(this);
-                $this.removeClass('active').animate({
-                    left: $this.width()
-                }, 500);
-            });
-
-            $target.addClass('active').show().css({
-                left: -($target.width())
-            }).animate({
-                left: 0
-            }, 500);
-        }
-    });
-});
+	/* for horizontal browsing */
+	jQuery(function($) {
+		      $('a.panel').click(function() {
+	        var $target = $($(this).attr('href')),
+	            $other = $target.siblings('.active');
+	        
+	        if (!$target.hasClass('active')) {
+	            $other.each(function(index, self) {
+	                var $this = $(this);
+	                $this.removeClass('active').animate({
+	                    left: $this.width()
+	                }, 500);
+	            });
+	
+	            $target.addClass('active').show().css({
+	                left: -($target.width())
+	            }).animate({
+	                left: 0
+	            }, 500);
+	        }
+	    });
+	});
 
 </script>
 
