@@ -1,19 +1,145 @@
+<!DOCTYPE html>
+<!-- @reload -->
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+
+<title>Kai / Destinations</title>
 
 </head>
 
 <body>
 
-<h3>Places I have been to.</h3>
+<h2><b>目的地</b></h2>
+<h2>Destinations</h2>
 
 <div class="wrapper">
-	<div>column 1</div>
-	<div>column 2</div>
-	<div>column 3</div>
+	<div><! List 1 -->
+		<h3>Asia</h3>
+		<a href="#">Japan</a>
+		<ul>China
+			<a href="#"><li>Shanghai</li></a>
+			<a href="#"><li>Beijing</li></a>
+			<a href="#"><li>Hangzhou</li></a>
+			<a href="#"><li>Haikou</li></a>
+			<a href="#"><li>Lijiang</li></a>
+			<a href="#"><li>Huangshan</li></a>
+			<a href="#"><li>Qingdao</li></a>
+			<a href="#"><li>Chengdu</li></a>								
+		</ul>	
+		<a href="#singapore" class="panel">Singapore</a>
+		<a href="#">Thailand</a>
+		<ul>Sri Lanka		
+			<a href="#"><li>Colombo</li></a>
+			<a href="#"><li>Ella</li></a>
+			<a href="#"><li>Kandy</li></a>
+			<a href="#"><li>Arugam Bay</li></a>
+		</ul>		
+		<a href="#">Malaysia</a>
+		<ul>Taiwan		
+			<a href="#"><li>Taipei</li></a>
+			<a href="#"><li>Kao-Hsiung</li></a>
+			<a href="#"><li>Kenting</li></a>
+			<a href="#"><li>Jiu-fen</li></a>
+		</ul>		
+		<a>Indonesia</a>	
+		<a href="#hongkong" class="panel">Hong Kong</a>
+		
+	</div><! // List 1 -->
+	
+	<div><! List 2 -->
+		<h3>America</h3>
+			<ul>United States		
+				<a href="#"><li>Seattle</li></a>
+				<a href="#"><li>Portland</li></a>
+				<a href="#"><li>San Diego</li></a>
+				<a href="#"><li>San Fransisco</li></a>
+				<a href="#"><li>Los Angeles</li></a>
+				<a href="#"><li>Yellowstone National Park</li></a>			
+				<a href="#"><li>Minneapolis</li></a>			
+				<a href="#"><li>Mt. Rushmore</li></a>
+				<a href="#"><li>Chicago</li></a>
+				<a href="#"><li>Indianapolis</li></a>
+				<a href="#"><li>New York</li></a>
+				<a href="#"><li>Washington D.C</li></a>
+				<a href="#"><li>New Orleans, LA</li></a>
+				<a href="#"><li>Nashville, TN</li></a>
+				<a href="#"><li>Memphis, TN</li></a>			
+				<a href="#"><li>Mammoth Cave</li></a>			
+				<a href="#"><li>Louisville, KY</li></a>
+				<a href="#"><li>Charleston, SC</li></a>
+			</ul>
+		
+		<h3>Africa</h3>
+			<ul>Tanzania
+				<a href="#"><li>Dar es Salaam</li></a>
+				<a href="#"><li>Mt. Kilimanjaro</li></a>
+				<a href="#"><li>Moshi</li></a>
+				<a href="#"><li>Arusha</li></a>
+			</ul>
+		<h3>Europe</h3>
+			<a href="#">Ireland</a>
+			<a href="#">England</a>
+	</div><! // List 2 -->
+	
+	<div>
+		<div class="panel" id="singapore">singapore</div>
+		<div class="panel" id="hongkong">hongkong</div>
+	</div>
+	
 </div>
+
+
+
+<!-- <div class="footer">
+	<p><a href="#">map</a>.  <a href="#">layovers</a>.  <a href="#">about</a>.</p>
+</div> -->
+
+<script type="text/javascript">
+$(document).ready(function ()
+{
+ 	$("li").hide();
+    $("ul").click(function (evt) {      
+        if(evt.target.tagName != 'UL') 
+            return;
+        $("li", this).slideToggle('100','swing');
+    });    
+   
+   /* for horizontal browsing */
+
+});
+
+jQuery(function($) {
+	   $('a.panel').click(function() {
+        var $target = $($(this).attr('href')),
+            $other = $target.siblings('.active'),
+            animIn = function () {
+                $target.addClass('active').show().css({
+                    left: -($target.width())
+                }).animate({
+                    left: 0
+                }, 500);
+            };
+        
+        if (!$target.hasClass('active') && $other.length > 0) {
+            $other.each(function(index, self) {
+                var $this = $(this);
+                $this.removeClass('active').animate({
+                    left: -$this.width()
+                }, 500, animIn);
+            });
+        } else if (!$target.hasClass('active')) {
+            animIn();
+        }
+    });
+});
+
+</script>
 
 </body>
 
