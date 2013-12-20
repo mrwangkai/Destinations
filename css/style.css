@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'pacificoregular';
+  src: url("font/webfontkit-pacifico/pacifico-webfont.eot");
+  src: url("font/webfontkit-pacifico/pacifico-webfont.eot?#iefix") format("embedded-opentype"), url("font/webfontkit-pacifico/pacifico-webfont.woff") format("woff"), url("font/webfontkit-pacifico/pacifico-webfont.ttf") format("truetype"), url("font/webfontkit-pacifico/pacifico-webfont.svg#pacificoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   width: 950px;
   margin: 0 auto;
@@ -17,13 +24,14 @@ div.wrapper {
   line-height: 18pt; }
 
 div.wrapper > div {
-  width: calc(77%/2);
+  width: calc(77%/3);
   height: auto;
   min-height: 300px;
   background: #f9f9f9;
   float: left;
   margin-top: 30px;
   margin-bottom: 50px;
+  margin-left: 15px;
   padding-left: calc(10%/2);
   padding-bottom: 20px; }
 
@@ -32,8 +40,7 @@ div.wrapper > div:nth-child(odd) {
   float: left;
   min-height: 300px;
   height: auto;
-  margin-bottom: 50px;
-  margin-right: 10px; }
+  margin-bottom: 50px; }
 
 div.wrapper > div:nth-child(odd):hover, div.wrapper > div:nth-child(even):hover {
   background: #f3f3f3; }
@@ -90,7 +97,6 @@ li {
   color: #d1d1d1; }
 
 .right {
-  display: hidden;
   height: 0;
   background-color: #fff;
   overflow: hidden;
@@ -100,9 +106,11 @@ li {
   -moz-transition: all 1s linear;
   transition: all 1s linear; }
 
-.right:target {
+div.right > div {
+  display: none; }
+
+div.right > div:target {
   display: block;
-  height: auto;
   background-color: #ffa;
   -webkit-transition: all 300ms linear;
   -ms-transition: all 300ms linear;

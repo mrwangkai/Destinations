@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- @reload -->
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<head>
+
+<link rel="stylesheet" href="css/horizontal.css">
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+
+<title>Kai / Destinations'</title>
+
+</head>
+
+<body>
+
+<header>
+	<h2><b>目的地</b>
+	Destinations</h2>
+</header>
+
+<section>
+
+<div id="viewContainer">
+   
+    <div class="page" id="viewLeft2">
+            <p>I am very left.</p>
+        <div class="one">
+        	<div class="list-left">listing left</div>
+        	<div class="list-right"><a href="#viewLeft1">to right.</a></div>
+        </div>
+    </div>
+    
+    <div class="page" id="viewLeft1">
+    	<p>I am right.</p>
+    	<div class="two"><a href="#viewLeft2">to left.</a></div>
+    </div> 
+    
+</div>
+
+<footer></footer>
+
+
+<script type="text/javascript">
+
+$(function() {
+    $('a[href*=#]:not([href=#])').bind('click',function(event){
+        var $anchor = $(this);
+        /*
+        if you want to use one of the easing effects:
+        $('html, body').stop().animate({
+            scrollLeft: $($anchor.attr('href')).offset().left
+        }, 1500,'easeInOutExpo');
+         */
+        $('html, body').stop().animate({
+            scrollLeft: $($anchor.attr('href')).offset().left
+        }, 800);
+        event.preventDefault();
+    });
+});
+
+window.scrollTo(0,0);
+
+/*
+ * window.scrollTo(x,y) is an efficient cross-broser function,
+ * which scrolls the document to position X, Y
+ * document.body.offsetWidth contains the value of the body's width
+ * document.documentElement contains the value of the document's width
+ *
+ * Logic: If you want to center the page, you have to substract
+ * the body's width from the document's width, then divide it
+ * by 2.
+ */
+
+
+
+</script>
+
+</body>
+
+</html>
