@@ -24,15 +24,46 @@
 
 <div id="viewContainer">
    
-    <div class="page" id="viewLeft2">
+    <div class="panel" id="viewLeft2">
             <p>I am very left.</p>
         <div class="one">
-        	<div class="list-left">listing left</div>
+        	<div class="list-left">
+			    <h3>Asia</h3>
+				<a href="#">Japan</a>
+				<ul>China
+					<a href="#"><li>Shanghai</li></a>
+					<a href="#"><li>Beijing</li></a>
+					<a href="#"><li>Hangzhou</li></a>
+					<a href="#"><li>Haikou</li></a>
+					<a href="#"><li>Lijiang</li></a>
+					<a href="#"><li>Huangshan</li></a>
+					<a href="#"><li>Qingdao</li></a>
+					<a href="#"><li>Chengdu</li></a>								
+				</ul>	
+				<a href="#singapore" class="panel">Singapore</a>
+				<a href="#">Thailand</a>
+				<ul>Sri Lanka		
+					<a href="#"><li>Colombo</li></a>
+					<a href="#"><li>Ella</li></a>
+					<a href="#"><li>Kandy</li></a>
+					<a href="#"><li>Arugam Bay</li></a>
+				</ul>		
+				<a href="#">Malaysia</a>
+				<ul>Taiwan		
+					<a href="#"><li>Taipei</li></a>
+					<a href="#"><li>Kao-Hsiung</li></a>
+					<a href="#"><li>Kenting</li></a>
+					<a href="#"><li>Jiu-fen</li></a>
+				</ul>		
+				<a>Indonesia</a>	
+				<a href="#hongkong" class="panel">Hong Kong</a>
+	        	
+        	</div>
         	<div class="list-right"><a href="#viewLeft1">to right.</a></div>
         </div>
     </div>
     
-    <div class="page" id="viewLeft1">
+    <div class="panel" id="viewLeft1">
     	<p>I am right.</p>
     	<div class="two"><a href="#viewLeft2">to left.</a></div>
     </div> 
@@ -43,6 +74,45 @@
 
 
 <script type="text/javascript">
+
+/*
+$(function() {
+    $('ul li').each(function() {
+        $(this).click(function(e) {
+            var i = $(this).index();
+            $('div').hide();
+            $('div.panel').slideToggle('100','swing');
+        });
+    });
+});
+*/
+
+
+$(document).ready(function ()
+{
+ 	$("li").hide();
+    $("ul").click(function (evt) {      
+        if(evt.target.tagName != 'UL') 
+            return;
+        $("li", this).slideToggle('100','swing');
+    });    
+   
+   /* for horizontal browsing */
+
+});
+
+
+/*
+$(function(showContent) {
+	$("a").click(function(){
+   var myelement = $(this).attr("href")
+    $(myelement).slideToggle("slow");
+    $(".toggle:visible").not(myelement).hide();
+    
+  });
+
+});
+*/
 
 $(function() {
     $('a[href*=#]:not([href=#])').bind('click',function(event){

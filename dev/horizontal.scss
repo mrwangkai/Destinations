@@ -20,22 +20,21 @@ header {
     margin: 80px auto;
 }
 
-div.page {
+div.panel {
     height:100%;
     display:table-cell;
-    margin-right: 100px;
 }
 
 
-div.page:nth-child(1) {
+div.panel:nth-child(1) {
 	width: calc((20%/2)+20%);
 	border: 1px solid green;
 }
 
-div.page:nth-child(2) {
+div.panel:nth-child(2) {
 	color: red;
 	width: calc((50%/2)+20%);
-	padding-right: 100px;
+	padding-right: 400px;
 	border: 1px solid red;
 }
 
@@ -44,7 +43,7 @@ div.page:nth-child(2) {
 
 .list-left,
 .list-right {
-	width: calc(70%/2);
+	width: 300px;
 	float: left;
 	margin: 0 auto;
 	min-height: 400px;
@@ -53,3 +52,30 @@ div.page:nth-child(2) {
 
 .list-left {background: #f6f6f6; margin-right: 10px;}
 .list-right {background: #e6e6e6;}
+
+
+ul {
+  color: #929292;
+  text-align: left;
+  list-style: none;
+  display: block;
+  margin-left: -40px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-style: italic; }
+
+li {
+  padding-left: 20px;
+  font-style: normal; }
+
+.list-left a, .list-right a {
+  display: block;
+  text-align: left; }
+
+a, a:visited, a:link {
+  color: #929292;
+  text-decoration: none;
+  font-weight: 100; }
+
+a:hover, li:hover {
+  color: #313131; }
